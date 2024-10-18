@@ -3,11 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="io.pragra.learning.july24springbean.Employee" name="employee">
-        <constructor-arg name="firstName" value="Asma"></constructor-arg>
-        <constructor-arg name="lastName" value="S"></constructor-arg>
-        <constructor-arg name="company" value="RBC"></constructor-arg>
-    </bean>
+<!--    <bean class="io.pragra.learning.july24springbean.Employee" name="employee">-->
+<!--        <property name="firstName" value="Asma"></property>-->
+<!--        <property name="lastName" value="S"></property>-->
+<!--     </bean>-->
 
     <bean class="io.pragra.learning.july24springbean.BMW" name="m3">
         <constructor-arg name="model" value="m3"></constructor-arg>
@@ -15,6 +14,7 @@
         <constructor-arg name="year" value="2022"></constructor-arg>
         <constructor-arg name="engine" ref="dieselEngine"></constructor-arg>
     </bean>
+
     <bean class="io.pragra.learning.july24springbean.BMW" name="m5">
         <constructor-arg name="model" value="m5"></constructor-arg>
         <constructor-arg name="hp" value="650"></constructor-arg>
@@ -27,4 +27,10 @@
     <bean class="io.pragra.learning.july24springbean.PetrolEngine" name="petrolEngine">
         <constructor-arg name="horsePower" value="650"></constructor-arg>
     </bean>
+
+<!--    <bean class="io.pragra.learning.july24springbean.EmployeeDAO" name="employeeDAO" init-method="establishConnection" destroy-method="releaserConnection">-->
+<!--        <constructor-arg name="url" value="jdbc:oracle:172.68.52.3:1521/empDB"></constructor-arg>-->
+<!--        <constructor-arg name="userName" value="sysadmin"></constructor-arg>-->
+<!--        <constructor-arg name="pwd" value="a7s8f7sd8fHgFF9(*^gGjJGHjkk"></constructor-arg>-->
+<!--    </bean>-->
 </beans>

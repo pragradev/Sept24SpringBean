@@ -7,30 +7,45 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-//@SpringBootApplication
+@SpringBootApplication
+@PropertySource(value = "application.properties")
 public class July24SpringBeanApplication {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext("io.pragra.learning.july24springbean.config"
-                ,"io.pragra.learning.july24springbean.databseConfiguration");
+//        ConfigurableApplicationContext context = SpringApplication.run(July24SpringBeanApplication.class, args);
+//        PragraplexOrder pragraplexOrder = context.getBean(PragraplexOrder.class);
+//        System.out.println(pragraplexOrder);
+//        Employee employee = context.getBean(Employee.class);
+//        System.out.println(employee);
+//        Employee employee1 = context.getBean(Employee.class);
+//        Employee employee2 = context.getBean(Employee.class);
+//        Employee employee3 = context.getBean(Employee.class);
+//        System.out.println(employee1);
+//        System.out.println(employee2);
+//        System.out.println(employee3);
+
+//        ApplicationContext context = new AnnotationConfigApplicationContext("io.pragra.learning.july24springbean.config"
+//                ,"io.pragra.learning.july24springbean.databseConfiguration");
 
 //        ApplicationContext context = new AnnotationConfigApplicationContext(appConfig.class, DBConfig.class);
 
 
-        Employee employee = context.getBean(Employee.class);
-        EmployeeDAO employeeDAO = context.getBean(EmployeeDAO.class);
-        System.out.println("employee =" + employee);
-        System.out.println("employeeDao =" + employeeDAO );
-
-        ((AnnotationConfigApplicationContext) context).registerShutdownHook();
-
-//        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+//        Employee employee = context.getBean(Employee.class);
+//        EmployeeDAO employeeDAO = context.getBean(EmployeeDAO.class);
+//        System.out.println("employee =" + employee);
+//        System.out.println("employeeDao =" + employeeDAO );
 //
-//        Employee employee = context.getBean(Employee.class);// Factory design pattern
-//        System.out.println(employee);
+//        ((AnnotationConfigApplicationContext) context).registerShutdownHook();
+
+        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+//
+        Employee employee = context.getBean(Employee.class);// Factory design pattern
+        System.out.println(employee);
 //        DieselEngine dieselEngine = context.getBean(DieselEngine.class);
 //        BMW m5 = context.getBean("m5",BMW.class);
 //        BMW m3 = context.getBean("m3",BMW.class);

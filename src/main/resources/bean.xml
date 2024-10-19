@@ -3,10 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--    <bean class="io.pragra.learning.july24springbean.Employee" name="employee">-->
-<!--        <property name="firstName" value="Asma"></property>-->
-<!--        <property name="lastName" value="S"></property>-->
-<!--     </bean>-->
+    <bean class="io.pragra.learning.july24springbean.Employee" name="employee">
+        <property name="firstName" value= "#{'Ravneet'.substring(2)}"></property>
+        <property name="lastName" value="#{'Ravneet'.substring(2)}"></property>
+     </bean>
 
     <bean class="io.pragra.learning.july24springbean.BMW" name="m3">
         <constructor-arg name="model" value="m3"></constructor-arg>

@@ -12,3 +12,12 @@ destroy
 
 Spring Container
 application context
+
+DI
+Depencency Injection
+Constructor
+Setter
+
+
+Bean Factory
+SPEL -> 
